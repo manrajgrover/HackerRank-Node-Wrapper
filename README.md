@@ -1,2 +1,3 @@
-# secret
-secret
+# HackerRank API Node Wrapper
+
+Node wrapper for HackerRank API
