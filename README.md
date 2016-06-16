@@ -1,3 +1,3 @@
-# HackerRank API Node Wrapper
+# HackerRank API Node Wrapper[*currently under development*]
 
 Node wrapper for HackerRank API
