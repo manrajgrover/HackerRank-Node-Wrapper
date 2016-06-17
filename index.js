@@ -2,17 +2,15 @@
 * @Author: Manraj Singh
 * @Date:   2016-06-15 21:53:33
 * @Last Modified by:   Manraj Singh
-* @Last Modified time: 2016-06-16 19:39:05
+* @Last Modified time: 2016-06-18 01:16:38
 */
 
 'use strict';
 
 
-import * as constants from './constants'
+import * as constants from './constants';
+import { request } from 'request';
 
-class ApiCalls{
-
-}
 
 class HackerRank {
   constructor(apiKey) {
@@ -31,5 +29,40 @@ class HackerRank {
 
   get apiKey() {
     return this._apiKey;
+  }
+
+  getQuery({source, lang, testcases}, api_key) {
+    return {
+      api_key,
+      source,
+      lang: parseInt(lang),
+      testcases
+    };
+  }
+
+  getLanguages(callback) {
+    request(this._langURL, (error, response) => {
+      if (!error && response.statusCode === 200) {
+        callback(null, response);
+      } else {
+        callback(error, null);
+      }
+    });
+  }
+
+  callApi(queryData, callback) {
+    request.post({ url : this._runURL, form : queryData}, (err,response) => {
+      if(err){
+        callback(err, null);
+      }
+      else{
+        callback(null, response);
+      }
+    });
+  }
+
+  run(config, callback) {
+    let queryData = this.getQuery(config, this._apiKey);
+    return this.callApi(queryData, callback);
   }
 }
