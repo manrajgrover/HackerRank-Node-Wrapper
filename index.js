@@ -2,7 +2,7 @@
 * @Author: Manraj Singh
 * @Date:   2016-06-15 21:53:33
 * @Last Modified by:   Manraj Singh
-* @Last Modified time: 2016-06-18 01:16:38
+* @Last Modified time: 2016-06-18 01:20:18
 */
 
 'use strict';
@@ -51,9 +51,9 @@ class HackerRank {
   }
 
   callApi(queryData, callback) {
-    request.post({ url : this._runURL, form : queryData}, (err,response) => {
+    request.post({ url : this._runURL, form : queryData}, (error, response) => {
       if(err){
-        callback(err, null);
+        callback(error, null);
       }
       else{
         callback(null, response);
