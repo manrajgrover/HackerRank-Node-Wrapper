@@ -2,7 +2,7 @@
 * @Author: Manraj Singh
 * @Date:   2016-06-18 01:42:54
 * @Last Modified by:   Manraj Singh
-* @Last Modified time: 2016-06-18 16:59:00
+* @Last Modified time: 2016-06-18 20:18:05
 */
 
 var gulp = require('gulp');
@@ -11,18 +11,18 @@ var babelify = require("babelify");
 var source = require('vinyl-source-stream');
 var gutil = require('gulp-util');
  
-gulp.task('es6', function() {
+gulp.task('browser', function() {
   browserify({ debug: true })
     .transform(babelify)
-    .require("./test.js", { entry: true })
+    .require("./Example/test.js", { entry: true })
     .bundle()
     .on('error',gutil.log)
     .pipe(source('app.js'))
-    .pipe(gulp.dest('./source'));
+    .pipe(gulp.dest('./Example/source'));
 });
  
 gulp.task('watch',function() {
-  gulp.watch(['./*.js'],['es6'])
+  gulp.watch(['./*.js'],['browser'])
 });
  
-gulp.task('default', ['es6','watch']);
+gulp.task('default', ['browser','watch']);

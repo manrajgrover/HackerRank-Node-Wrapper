@@ -1,6 +1,6 @@
 {
   "name": "hackerrank-node-wrapper",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "HackerRank API Node Wrapper",
   "main": "index.js",
   "scripts": {

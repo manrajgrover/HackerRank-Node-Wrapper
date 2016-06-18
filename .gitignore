@@ -1,4 +1,4 @@
-/source/*
-/test.js
+/Example/source/*
+/Example/test.js
 /node_modules
 /Example/*.html
