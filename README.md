@@ -42,12 +42,12 @@ import HackerRank from 'hackerrank-node-wrapper';
 var hr = new HackerRank('yourApiKey');
 
 hr.getLanguages(function(error, response){
-	if(error){
-		console.log("Error: ", error);
-	}
-	else{
-		console.log(response.body);
-	}
+  if(error){
+    console.log("Error: ", error);
+  }
+  else{
+    console.log(response.body);
+  }
 });
 ```
 
@@ -65,12 +65,12 @@ var data = {
 };
 
 hr.run(data,function(error, response){
-	if(error){
-		console.log("Error: "+ error);
-	}
-	else{
-		console.log(response.body);
-	}
+  if(error){
+    console.log("Error: "+ error);
+  }
+  else{
+    console.log(response.body);
+  }
 });
 ```
 
