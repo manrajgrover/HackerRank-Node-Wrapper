@@ -2,21 +2,21 @@
 * @Author: Manraj Singh
 * @Date:   2016-06-15 21:53:33
 * @Last Modified by:   Manraj Singh
-* @Last Modified time: 2016-06-18 17:00:05
+* @Last Modified time: 2016-06-18 18:27:09
 */
 
 'use strict';
 
 
 import * as constants from './constants';
-import { request } from 'request';
+import request from 'request';
 
 
 class HackerRank {
   constructor(apiKey) {
-    /*this._runURL = constants.RUN_URL;
+    this._runURL = constants.RUN_URL;
     this._langURL = constants.LANG_URL;
-    this._apiKey = apiKey;*/
+    this._apiKey = apiKey;
   }
   
   get runURL() {
@@ -41,7 +41,7 @@ class HackerRank {
   }
 
   getLanguages(callback) {
-    request(this._langURL, (error, response) => {
+    request({url: this._langURL}, (error, response) => {
       if (!error && response.statusCode === 200) {
         callback(null, response);
       } else {
@@ -50,9 +50,9 @@ class HackerRank {
     });
   }
 
-  callApi(queryData, callback) {
+  postRun(queryData, callback) {
     request.post({ url : this._runURL, form : queryData}, (error, response) => {
-      if(err){
+      if(error){
         callback(error, null);
       }
       else{
@@ -63,7 +63,7 @@ class HackerRank {
 
   run(config, callback) {
     let queryData = this.getQuery(config, this._apiKey);
-    return this.callApi(queryData, callback);
+    return this.postRun(queryData, callback);
   }
 }
 
