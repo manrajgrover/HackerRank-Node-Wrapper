@@ -1,2 +1,3 @@
-source/*
-test.js
+/source/*
+/test.js
+/node_modules
