@@ -1,4 +1,5 @@
 # HackerRank API Node Wrapper
+[![npm version](https://badge.fury.io/js/hackerrank-node-wrapper.svg)](https://www.npmjs.com/package/hackerrank-node-wrapper) [![npm](https://img.shields.io/npm/dt/hackerrank-node-wrapper.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/hackerrank-node-wrapper) ![awesome](https://img.shields.io/badge/awesome-yes-green.svg)
 
 Node wrapper for HackerRank API
 
