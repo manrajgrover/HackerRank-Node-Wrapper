@@ -19,11 +19,11 @@ You can get your HackerRank API Key by visiting [HackerRank API](https://www.hac
 
 ### Methods available
 
-* `_runURL` : Get Run URL
-* `_langURL` : Get Language URL
-* `_apiKey` : Get API Key
-* `getLanguages( callback )` : Gets and returns languages response from HackerRank
-* `run ( config, callback )` : Posts and returns response to callback from HackerRank after running the code on testcases provided
+* `runURL` : Get Run URL
+* `langURL` : Get Language URL
+* `apiKey` : Get API Key
+* `getLanguages( callback )` : Returns languages as a response from HackerRank
+* `run ( config, callback )` : Returns response as a callback from HackerRank after running the code on testcases provided
 
 ### Config
 

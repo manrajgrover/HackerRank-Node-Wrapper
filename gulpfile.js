@@ -13,7 +13,7 @@ var gutil = require('gulp-util');
 var babel = require('gulp-babel');
 
 
-gulp.task('browser', function() {
+gulp.task('browser', _ => {
   browserify({ debug: true })
     .transform(babelify)
     .require("./Example/test.js", { entry: true })
@@ -23,7 +23,7 @@ gulp.task('browser', function() {
     .pipe(gulp.dest('./Example/source'));
 });
 
-gulp.task('es6', function(){
+gulp.task('es6',_ => {
   gulp.src('src/*.js')
     .pipe(babel({
       presets: ['es2015']
@@ -31,7 +31,7 @@ gulp.task('es6', function(){
     .pipe(gulp.dest('./dist'))
 });
 
-gulp.task('watch',function() {
+gulp.task('watch',_ => {
   gulp.watch(['./src/*.js'],['browser', 'es6'])
 });
  

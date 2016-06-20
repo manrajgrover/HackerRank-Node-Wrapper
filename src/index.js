@@ -40,7 +40,7 @@ class HackerRank {
   }
 
   getLanguages(callback) {
-    request({url: this._langURL}, (error, response) => {
+    request({url: this.langURL}, (error, response) => {
       if (!error && response.statusCode === 200) {
         callback(null, response);
       } else {
@@ -50,7 +50,7 @@ class HackerRank {
   }
 
   postRun(queryData, callback) {
-    request.post({ url : this._runURL, form : queryData}, (error, response) => {
+    request.post({ url : this.runURL, form : queryData}, (error, response) => {
       if(error){
         callback(error, null);
       }
@@ -61,7 +61,7 @@ class HackerRank {
   }
 
   run(config, callback) {
-    let queryData = this.getQuery(config, this._apiKey);
+    let queryData = this.getQuery(config, this.apiKey);
     return this.postRun(queryData, callback);
   }
 }
