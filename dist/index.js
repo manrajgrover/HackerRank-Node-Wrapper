@@ -49,7 +49,7 @@ var HackerRank = function () {
   }, {
     key: 'getLanguages',
     value: function getLanguages(callback) {
-      (0, _request2.default)({ url: this._langURL }, function (error, response) {
+      (0, _request2.default)({ url: this.langURL }, function (error, response) {
         if (!error && response.statusCode === 200) {
           callback(null, response);
         } else {
@@ -60,7 +60,7 @@ var HackerRank = function () {
   }, {
     key: 'postRun',
     value: function postRun(queryData, callback) {
-      _request2.default.post({ url: this._runURL, form: queryData }, function (error, response) {
+      _request2.default.post({ url: this.runURL, form: queryData }, function (error, response) {
         if (error) {
           callback(error, null);
         } else {
@@ -71,7 +71,7 @@ var HackerRank = function () {
   }, {
     key: 'run',
     value: function run(config, callback) {
-      var queryData = this.getQuery(config, this._apiKey);
+      var queryData = this.getQuery(config, this.apiKey);
       return this.postRun(queryData, callback);
     }
   }, {

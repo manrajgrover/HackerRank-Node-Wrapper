@@ -4,8 +4,13 @@
   "description": "HackerRank API Node Wrapper",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build":"gulp ",
+    "prepublish":"npm run build"
   },
+  "files":[
+    "index.js",
+    "dist/"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ManrajGrover/HackerRank-API-Node-Wrapper.git"
