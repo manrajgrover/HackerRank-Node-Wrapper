@@ -2,7 +2,7 @@
 * @Author: Manraj Singh
 * @Date:   2016-06-18 01:42:54
 * @Last Modified by:   Manraj Singh
-* @Last Modified time: 2016-06-18 19:59:47
+* @Last Modified time: 2016-06-30 03:09:12
 */
 
 var gulp = require('gulp');
@@ -13,7 +13,7 @@ var gutil = require('gulp-util');
 var babel = require('gulp-babel');
 
 
-gulp.task('browser', _ => {
+gulp.task('browser', () => {
   browserify({ debug: true })
     .transform(babelify)
     .require("./Example/test.js", { entry: true })
@@ -23,7 +23,7 @@ gulp.task('browser', _ => {
     .pipe(gulp.dest('./Example/source'));
 });
 
-gulp.task('es6',_ => {
+gulp.task('es6', () => {
   gulp.src('src/*.js')
     .pipe(babel({
       presets: ['es2015']
@@ -31,7 +31,7 @@ gulp.task('es6',_ => {
     .pipe(gulp.dest('./dist'))
 });
 
-gulp.task('watch',_ => {
+gulp.task('watch', () => {
   gulp.watch(['./src/*.js'],['browser', 'es6'])
 });
  
