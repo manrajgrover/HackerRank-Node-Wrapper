@@ -40,13 +40,12 @@ Config should be an object containing following properties:
 ```javascript
 import HackerRank from 'hackerrank-node-wrapper';
 
-var hr = new HackerRank('yourApiKey');
+let hr = new HackerRank('yourApiKey');
 
-hr.getLanguages(function(error, response){
-  if(error){
-    console.log("Error: ", error);
-  }
-  else{
+hr.getLanguages((error, response) => {
+  if (error) {
+    console.log(`Error: ${error}`);
+  } else {
     console.log(response.body);
   }
 });
@@ -57,19 +56,18 @@ hr.getLanguages(function(error, response){
 ```javascript
 import HackerRank from 'hackerrank-node-wrapper';
 
-var hr = new HackerRank('yourApiKey');
+let hr = new HackerRank('yourApiKey');
 
-var data = {
-  'source': 'print "Hello World"',
-  'lang': 5,
-  'testcases': '["1"]'
+let data = {
+  source: 'print "Hello World"',
+  lang: 5,
+  testcases: '["1"]'
 };
 
-hr.run(data,function(error, response){
-  if(error){
-    console.log("Error: "+ error);
-  }
-  else{
+hr.run(data, (error, response) => {
+  if(error) {
+    console.log(`Error: ${error}`);
+  } else {
     console.log(response.body);
   }
 });
