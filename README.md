@@ -1,7 +1,7 @@
 # HackerRank API Node Wrapper
 [![npm version](https://badge.fury.io/js/hackerrank-node-wrapper.svg)](https://www.npmjs.com/package/hackerrank-node-wrapper) [![npm](https://img.shields.io/npm/dt/hackerrank-node-wrapper.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/hackerrank-node-wrapper) ![awesome](https://img.shields.io/badge/awesome-yes-green.svg)
 
-Node wrapper for HackerRank API
+> Node wrapper for HackerRank API
 
 This library enables compiling and running code and also fetching languages available using [HackerRank API](https://www.hackerrank.com/api/docs).
 
@@ -77,4 +77,4 @@ hr.run(data,function(error, response){
 
 ## License
 
-MIT © [Manraj Singh](https://github.com/ManrajGrover)
+[MIT](https://github.com/ManrajGrover/HackerRank-Node-Wrapper/blob/master/LICENSE) © [Manraj Singh](https://github.com/ManrajGrover)
