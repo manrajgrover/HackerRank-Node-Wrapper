@@ -40,7 +40,7 @@ Config should be an object containing following properties:
 ```javascript
 import HackerRank from 'hackerrank-node-wrapper';
 
-let hr = new HackerRank('yourApiKey');
+const hr = new HackerRank('yourApiKey');
 
 hr.getLanguages((error, response) => {
   if (error) {
@@ -56,7 +56,7 @@ hr.getLanguages((error, response) => {
 ```javascript
 import HackerRank from 'hackerrank-node-wrapper';
 
-let hr = new HackerRank('yourApiKey');
+const hr = new HackerRank('yourApiKey');
 
 let data = {
   source: 'print "Hello World"',
