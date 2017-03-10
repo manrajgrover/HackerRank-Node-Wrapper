@@ -1,7 +1,7 @@
 # HackerRank API Node Wrapper
 [![npm version](https://badge.fury.io/js/hackerrank-node-wrapper.svg)](https://www.npmjs.com/package/hackerrank-node-wrapper) [![npm](https://img.shields.io/npm/dt/hackerrank-node-wrapper.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/hackerrank-node-wrapper) ![awesome](https://img.shields.io/badge/awesome-yes-green.svg)
 
-Node wrapper for HackerRank API
+> Node wrapper for HackerRank API
 
 This library enables compiling and running code and also fetching languages available using [HackerRank API](https://www.hackerrank.com/api/docs).
 
@@ -40,13 +40,12 @@ Config should be an object containing following properties:
 ```javascript
 import HackerRank from 'hackerrank-node-wrapper';
 
-var hr = new HackerRank('yourApiKey');
+const hr = new HackerRank('yourApiKey');
 
-hr.getLanguages(function(error, response){
-  if(error){
-    console.log("Error: ", error);
-  }
-  else{
+hr.getLanguages((error, response) => {
+  if (error) {
+    console.log(`Error: ${error}`);
+  } else {
     console.log(response.body);
   }
 });
@@ -57,19 +56,18 @@ hr.getLanguages(function(error, response){
 ```javascript
 import HackerRank from 'hackerrank-node-wrapper';
 
-var hr = new HackerRank('yourApiKey');
+const hr = new HackerRank('yourApiKey');
 
-var data = {
-  'source': 'print "Hello World"',
-  'lang': 5,
-  'testcases': '["1"]'
+let data = {
+  source: 'print "Hello World"',
+  lang: 5,
+  testcases: '["1"]'
 };
 
-hr.run(data,function(error, response){
-  if(error){
-    console.log("Error: "+ error);
-  }
-  else{
+hr.run(data, (error, response) => {
+  if(error) {
+    console.log(`Error: ${error}`);
+  } else {
     console.log(response.body);
   }
 });
@@ -77,4 +75,4 @@ hr.run(data,function(error, response){
 
 ## License
 
-MIT © [Manraj Singh](https://github.com/ManrajGrover)
+[MIT](https://github.com/ManrajGrover/HackerRank-Node-Wrapper/blob/master/LICENSE) © [Manraj Singh](https://github.com/ManrajGrover)
