@@ -2,3 +2,4 @@
 /Example/test.js
 /node_modules
 /Example/*.html
+.npm-debug.log
