@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp",
-    "lint": "eslint ./src",
-    "prepublish": "npm run build"
+    "lint": "eslint ./src"
   },
   "files": [
     "index.js",
