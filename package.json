@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ManrajGrover/HackerRank-API-Node-Wrapper.git"
+    "url": "git+https://github.com/manrajgrover/HackerRank-API-Node-Wrapper.git"
   },
   "keywords": [
     "hackerrank",
@@ -27,9 +27,9 @@
   "author": "Manraj Singh <manrajsinghgrover@gmail.com> (http://manrajsingh.in)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ManrajGrover/HackerRank-API-Node-Wrapper/issues"
+    "url": "https://github.com/manrajgrover/HackerRank-API-Node-Wrapper/issues"
   },
-  "homepage": "https://github.com/ManrajGrover/HackerRank-API-Node-Wrapper#readme",
+  "homepage": "https://github.com/manrajgrover/HackerRank-API-Node-Wrapper#readme",
   "devDependencies": {
     "babel-preset-es2015": "6.9.0",
     "babelify": "7.3.0",

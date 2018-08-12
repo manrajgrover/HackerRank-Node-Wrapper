@@ -1,5 +1,5 @@
 # HackerRank API Node Wrapper
-[![Build Status](https://travis-ci.org/ManrajGrover/HackerRank-Node-Wrapper.svg?branch=master)](https://travis-ci.org/ManrajGrover/HackerRank-Node-Wrapper) [![npm version](https://badge.fury.io/js/hackerrank-node-wrapper.svg)](https://www.npmjs.com/package/hackerrank-node-wrapper) [![npm](https://img.shields.io/npm/dt/hackerrank-node-wrapper.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/hackerrank-node-wrapper) ![awesome](https://img.shields.io/badge/awesome-yes-green.svg)
+[![Build Status](https://travis-ci.org/manrajgrover/HackerRank-Node-Wrapper.svg?branch=master)](https://travis-ci.org/manrajgrover/HackerRank-Node-Wrapper) [![npm version](https://badge.fury.io/js/hackerrank-node-wrapper.svg)](https://www.npmjs.com/package/hackerrank-node-wrapper) [![npm](https://img.shields.io/npm/dt/hackerrank-node-wrapper.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/hackerrank-node-wrapper) ![awesome](https://img.shields.io/badge/awesome-yes-green.svg)
 
 > Node wrapper for HackerRank API
 
@@ -75,4 +75,4 @@ hr.run(data, (error, response) => {
 
 ## License
 
-[MIT](https://github.com/ManrajGrover/HackerRank-Node-Wrapper/blob/master/LICENSE) © [Manraj Singh](https://github.com/ManrajGrover)
+[MIT](https://github.com/manrajgrover/HackerRank-Node-Wrapper/blob/master/LICENSE) © [Manraj Singh](https://github.com/manrajgrover)
